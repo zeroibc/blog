@@ -1,0 +1,9 @@
+web:
+  image: nginx
+  volumes:
+  - /var/local/www/blog/public:/usr/share/nginx/html
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_HOST=blog.zeroibc.com
+   - NGINX_PORT=80
