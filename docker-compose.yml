@@ -1,7 +1,7 @@
 web:
   image: nginx
   volumes:
-  - /var/local/www/blog/public:/usr/share/nginx/html
+  - ./public:/usr/share/nginx/html
   ports:
    - "80:80"
   environment:
