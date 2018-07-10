@@ -8,7 +8,7 @@ echo 123;
 
 $config = array(
     'token_field' => 'X-Hub-Signature',
-    'access_token' => '1501671226@qq.com',
+    'access_token' => '850c4c27dcb252b81e4b783f83a8a19be44db6ee',
     'bash_path' => './sh/hexo-pull.sh',
 );
 
