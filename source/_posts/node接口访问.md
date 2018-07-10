@@ -36,7 +36,7 @@ app.get('/city',(req,res)=>{
 
 2.引入mongoose 首先要看下数据库名字
 
-![](C:\Users\VULCAN\Desktop\1531216400(1).jpg)
+![](https://imgchr.com/i/PnftXj)
 
 ```javascript
  
@@ -85,4 +85,4 @@ app.listen(3000);
 
 4.打开页面请求接口
 
-![1531216706377](C:\Users\VULCAN\AppData\Local\Temp\1531216706377.png)
+![](https://imgchr.com/i/PnfYcQ)
