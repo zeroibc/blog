@@ -8,4 +8,5 @@ pwd='/var/local/www/blog'
 
 cd $pwd
 git pull
+cnpm install
 hexo g
