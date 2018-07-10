@@ -1,4 +1,4 @@
-#!/bin bash
+#!/usr/bin/env bash
 #主站博客自动部署脚本
 
 export NODE_HOME=/usr/local/src/node
