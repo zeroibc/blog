@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #主站博客自动部署脚本
 
-export NODE_HOME=/usr/local/node
-export PATH=$NODE_HOME/bin:$PATH
-
-pwd='/data/html/hexo'
-
-cd $pwd/source
-git pull
+pwd='/var/local/www/blog'
+pkill php
 
 cd $pwd
-$pwd/node_modules/hexo/bin/hexo g
+git pull
+
+hexo g
+
+cd $pwd/wh
+nohup php -S 0.0.0.0:8080 ./git.php
