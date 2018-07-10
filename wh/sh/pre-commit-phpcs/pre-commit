@@ -1,0 +1,29 @@
+#!/bin/bash
+
+commit_files=`git diff --name-only`
+args='-n -s'
+php_files="";
+php_files_count=0;
+
+for f in $commit_files; do
+    # 未找到文件或者不是php文件
+    if [[ ! -e $f || $f != *.php ]]; then
+        continue;
+    fi
+    php_files_count=$((php_files_count+1))
+    # 拼接变更的php文件
+    php_files="$php_files $f"
+done;
+# php语法错误检测
+for file in $php_files; do
+    eval php -l $file
+done;
+# 没有php文件更新
+if [[ $php_files_count -eq 0 ]]; then
+    exit 0;
+fi
+# 忽略文件
+[ -f .csignore ] && ignore_file="`tr '\n' ',' < .csignore |sed 's/,$//g'`"
+[ -n $ignore_file ] && args=`echo "${args} --ignore='${ignore_file}'"`
+# 异常退出码为1
+eval phpcs $args $php_files
