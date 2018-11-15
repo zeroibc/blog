@@ -75,6 +75,7 @@ per_page: 8
 pagination_dir: page
 
 # Disqus
+disqus: seansun
 disqus_shortname:
 
 # Extensions
@@ -85,7 +86,7 @@ disqus_shortname:
 #  - hexo-generator-baidu-sitemap
 #  - hexo-generator-sitemap
 
-theme: yilia
+theme: apollo
 exclude_generator:
 
 # Deployment
@@ -130,3 +131,9 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+    
+archive_generator:
+    per_page: 0
+    yearly: true
+    monthly: true
+    daily: true
